@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: test-rhoai-chatbot-4
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: test-rhoai-chatbot-4 
+  name: test-rhoai-chatbot-4
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+  selector:
+    app.kubernetes.io/instance: test-rhoai-chatbot-4 
